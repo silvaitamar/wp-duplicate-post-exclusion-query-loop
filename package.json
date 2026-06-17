@@ -1,5 +1,5 @@
 {
-	"name": "unique-query-loop-extension",
+	"name": "wp-unique-query-loop-extension",
 	"version": "1.0.0",
 	"description": "Estende o bloco Query Loop com exclusão de posts duplicados na mesma página.",
 	"private": true,

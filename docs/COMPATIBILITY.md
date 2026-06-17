@@ -82,6 +82,6 @@ add_filter( 'uqle_should_track_query_block', function ( bool $track, array $pars
 
 - [x] Advanced Query Loop
 - [ ] Query Loop nativo (sem variação)
-- [ ] Outras variações `core/query` encontradas na comunidade
+- [ ] Outras variações `core/query`
 
-Contribuições de relatos de compatibilidade são bem-vindas via issues no GitHub.
+Relatos de compatibilidade podem ser abertos em [Issues](https://github.com/silvaitamar/wp-unique-query-loop-extension/issues).

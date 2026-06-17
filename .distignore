@@ -1,7 +1,8 @@
-# Excluído do pacote enviado ao WordPress.org (SVN / GitHub Release).
+# Metadados e documentação de desenvolvimento (distribuição usa readme.txt).
 .github/
 .git/
 .gitignore
+.gitattributes
 .distignore
 node_modules/
 package.json
@@ -10,7 +11,7 @@ npm-install.log
 src/
 composer.json
 composer.lock
+docs/
 *.md
 !readme.txt
 languages/.gitkeep
-assets/.gitkeep

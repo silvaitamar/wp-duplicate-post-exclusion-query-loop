@@ -12,12 +12,12 @@ Prevent duplicate posts across multiple Query Loop blocks on the same page.
 
 == Description ==
 
-**Unique Query Loop Extension** adds a single toggle to the native `core/query` (Query Loop) block so posts already shown by another Query Loop on the same page are not displayed again.
+**Unique Query Loop Extension** adds a toggle to the native `core/query` (Query Loop) block so posts already shown by another Query Loop on the same page are not displayed again.
 
 = How it works =
 
 1. Edit a Query Loop block in the block editor.
-2. In the sidebar, open **Unique posts on page** and enable **Make posts unique on page**.
+2. In the sidebar, enable **Make posts unique on page**.
 3. Enable the same option on any other Query Loops that should respect prior results.
 4. On the front end, each enabled loop excludes post IDs already rendered by previous enabled loops.
 
@@ -27,20 +27,17 @@ Prevent duplicate posts across multiple Query Loop blocks on the same page.
 * Uses official hooks: `query_loop_block_query_vars` and `render_block`.
 * No extra database queries; only adjusts existing query arguments.
 * Per-request in-memory registry (no transients or options).
+* Compatible with Query Loop variations such as Advanced Query Loop.
 
 = Requirements =
 
 * WordPress 6.7 or later
 * PHP 7.4 or later
 
-= Author =
-
-Developed by [Itamar Silva](https://github.com/silvaitamar).
-
 == Installation ==
 
-1. Upload the plugin folder to `/wp-content/plugins/` or install from the WordPress.org plugin directory.
-2. Activate **Unique Query Loop Extension** under **Plugins**.
+1. Upload the `unique-query-loop-extension` folder to `/wp-content/plugins/`.
+2. Activate the plugin through the **Plugins** screen in WordPress.
 3. Edit a Query Loop block and enable **Make posts unique on page** in the block sidebar.
 
 == Frequently Asked Questions ==
@@ -51,7 +48,7 @@ No. The plugin extends the native `core/query` block only.
 
 = Does this affect the editor preview? =
 
-The `query_loop_block_query_vars` filter runs on the front end. The editor preview uses the REST API and does not simulate cross-loop exclusion on the same page.
+No. Cross-loop exclusion runs on the front end only. The editor preview uses the REST API and does not simulate exclusion between multiple loops on the same page.
 
 = Do Query Loops without the option participate? =
 
@@ -60,10 +57,6 @@ No. Only loops with **Make posts unique on page** enabled register and exclude p
 = Does this work with Advanced Query Loop or other Query Loop variations? =
 
 Yes. Variations register on the native `core/query` block. This plugin extends the same block and uses official render hooks, so it works alongside extensions like Advanced Query Loop.
-
-== Screenshots ==
-
-1. Toggle control in the Query Loop sidebar (coming soon).
 
 == Changelog ==
 

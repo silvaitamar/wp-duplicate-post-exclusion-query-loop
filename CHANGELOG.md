@@ -10,10 +10,12 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 
 - Prioridade do filtro `query_loop_block_query_vars` alterada para 20 (compatibilidade com Advanced Query Loop e extensões similares).
 - Hooks públicos `uqle_query_loop_post__not_in` e `uqle_should_track_query_block` para integrações de terceiros.
+- Revisão da documentação pública: README unificado, `readme.txt` sem referências prematuras, guia de release removido do repositório.
 
 ### Added
 
 - Documentação de compatibilidade em `docs/COMPATIBILITY.md`.
+- Índice em `docs/README.md`.
 
 ## [1.0.0] - 2026-06-16
 
@@ -23,11 +25,11 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 - Toggle **Tornar posts únicos na página** no painel lateral do Query Loop.
 - Exclusão via `post__not_in` no filtro `query_loop_block_query_vars`.
 - Registro de IDs renderizados por requisição com `Rendered_Posts_Registry`.
-- Fluxo de release: GitHub Actions, script de ZIP e documentação em `docs/RELEASE.md`.
+- GitHub Actions de release e script `scripts/build-release-zip.sh`.
 
 ### Fixed
 
 - `TypeError` em `pre_render_block` quando o bloco raiz não possui pai (`WP_Block|null`).
 
-[Unreleased]: https://github.com/silvaitamar/unique-query-loop-extension/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/silvaitamar/unique-query-loop-extension/releases/tag/v1.0.0
+[Unreleased]: https://github.com/silvaitamar/wp-unique-query-loop-extension/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/silvaitamar/wp-unique-query-loop-extension/releases/tag/v1.0.0

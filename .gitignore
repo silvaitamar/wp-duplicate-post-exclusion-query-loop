@@ -1,0 +1,9 @@
+/node_modules/
+/vendor/
+*.log
+.DS_Store
+*.zip
+npm-install.log
+
+# Artefatos locais de release (o ZIP é gerado pelo script/CI)
+unique-query-loop-extension.zip

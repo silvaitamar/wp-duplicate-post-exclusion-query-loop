@@ -1,0 +1,14 @@
+{
+	"name": "instinto-canino/unique-query-loop-extension",
+	"description": "Estende o bloco Query Loop com exclusão de posts duplicados na mesma página.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=7.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"UniqueQueryLoopExtension\\": "src/"
+		}
+	}
+}

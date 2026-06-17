@@ -1,0 +1,16 @@
+# Excluído do pacote enviado ao WordPress.org (SVN / GitHub Release).
+.github/
+.git/
+.gitignore
+.distignore
+node_modules/
+package.json
+package-lock.json
+npm-install.log
+src/
+composer.json
+composer.lock
+*.md
+!readme.txt
+languages/.gitkeep
+assets/.gitkeep

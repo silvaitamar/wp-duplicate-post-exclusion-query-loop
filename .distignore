@@ -1,17 +1,20 @@
-# Metadados e documentação de desenvolvimento (distribuição usa readme.txt).
+# Itens excluídos do pacote de distribuição (ZIP / WordPress.org).
+# Os arquivos PHP em src/ SÃO necessários (autoload). Apenas o JS-fonte é excluído,
+# pois o runtime usa o bundle compilado em build/.
 .github/
 .git/
 .gitignore
 .gitattributes
 .distignore
 node_modules/
+vendor/
 package.json
 package-lock.json
 npm-install.log
-src/
 composer.json
 composer.lock
 docs/
+src/index.js
 *.md
 !readme.txt
 languages/.gitkeep

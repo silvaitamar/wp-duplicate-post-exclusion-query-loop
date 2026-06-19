@@ -24,6 +24,12 @@ test -f "${STAGE}/${SLUG}/build/index.js" || {
 	exit 1
 }
 
+# As classes PHP precisam estar no pacote (autoload em runtime).
+test -f "${STAGE}/${SLUG}/src/Plugin.php" || {
+	echo "error: src/Plugin.php ausente no pacote. Verifique o .distignore." >&2
+	exit 1
+}
+
 rm -f "$OUT"
 (cd "$STAGE" && zip -rq "$OUT" "$SLUG")
 

@@ -17,6 +17,10 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 - Documentação de compatibilidade em `docs/COMPATIBILITY.md`.
 - Índice em `docs/README.md`.
 
+### Fixed
+
+- Pacote de distribuição passa a incluir as classes PHP de `src/` (antes excluídas pelo `.distignore`), corrigindo erro fatal na ativação a partir do ZIP. O script de release agora valida a presença de `src/Plugin.php`.
+
 ## [1.0.0] - 2026-06-16
 
 ### Added

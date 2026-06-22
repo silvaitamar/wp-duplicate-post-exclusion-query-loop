@@ -50,18 +50,18 @@ const withUniqueOnPageControl = createHigherOrderComponent( ( BlockEdit ) => {
 				<InspectorControls>
 					<PanelBody
 						title={ __(
-							'Posts únicos na página',
+							'Unique posts on page',
 							'unique-query-loop-extension'
 						) }
 						initialOpen={ false }
 					>
 						<ToggleControl
 							label={ __(
-								'Tornar posts únicos na página',
+								'Make posts unique on page',
 								'unique-query-loop-extension'
 							) }
 							help={ __(
-								'Evita que posts já exibidos em outros Query Loops da mesma página apareçam novamente.',
+								'Prevents posts already shown in other Query Loops on the same page from appearing again.',
 								'unique-query-loop-extension'
 							) }
 							checked={ !! attributes[ ATTRIBUTE_NAME ] }

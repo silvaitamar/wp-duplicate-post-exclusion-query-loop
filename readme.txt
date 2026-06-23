@@ -62,6 +62,10 @@ Yes. Variations register on the native `core/query` block. This plugin extends t
 
 Partially. A Query Loop set to inherit the template query renders from the global query and does not pass through the `query_loop_block_query_vars` filter. Such an inherited loop still registers the posts it shows, so a later custom loop will exclude them. However, exclusion is not applied to the inherited loop itself (it will not hide posts shown by an earlier loop). Full support for inherited queries is planned for a future release.
 
+== Screenshots ==
+
+1. The "Make posts unique on page" toggle in the Query Loop block sidebar.
+
 == Changelog ==
 
 = 1.0.0 =

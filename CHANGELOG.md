@@ -8,13 +8,18 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 
 ### Changed
 
+- Strings-fonte do editor agora em inglês (`msgid`), seguindo a convenção do WordPress.org; o português passou a ser uma tradução empacotada.
 - Prioridade do filtro `query_loop_block_query_vars` alterada para 20 (compatibilidade com Advanced Query Loop e extensões similares).
 - Hooks públicos `uqle_query_loop_post__not_in` e `uqle_should_track_query_block` para integrações de terceiros.
 - Revisão da documentação pública: README unificado, `readme.txt` sem referências prematuras, guia de release removido do repositório.
 
 ### Added
 
+- Tradução pt_BR empacotada em `languages/` (`.pot`, `pt_BR.po`/`.mo` e o `.json` de tradução do script do editor).
 - Documentação de compatibilidade em `docs/COMPATIBILITY.md`.
+- Seções de limitações conhecidas: "Herdar consulta do modelo" (`inherit: true`) e preview do editor.
+- Compatibilidade com cache de página (full-page cache) validada e documentada.
+- FAQ sobre "Inherit query from template" no `readme.txt`.
 - Índice em `docs/README.md`.
 
 ### Fixed

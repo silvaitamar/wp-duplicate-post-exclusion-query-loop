@@ -34,6 +34,37 @@ pre_render_block (AQL registra filtro de query vars)
   → render_block (UQLE encerra tracking)
 ```
 
+## Limitação conhecida: "Herdar consulta do modelo" (`inherit: true`)
+
+Quando um Query Loop usa **"Herdar consulta do modelo"** (`inherit: true`), o `core/post-template` renderiza a partir do `$wp_query` global e **não** chama `build_query_vars_from_query_block()`. Como o filtro `query_loop_block_query_vars` só dispara nesse caminho, a exclusão `post__not_in` **não é aplicada** a um loop herdado.
+
+O rastreamento de IDs, porém, ocorre via `render_block_context` e funciona em qualquer loop. Na prática:
+
+| Situação | Registra posts exibidos | Exclui posts anteriores |
+|----------|:----------------------:|:-----------------------:|
+| Loop personalizado (não-herdado) | ✅ | ✅ |
+| Loop herdado (`inherit: true`) | ✅ | ❌ |
+
+Consequências (confirmadas em template de arquivo):
+
+- **Funciona:** loop herdado primeiro (lista principal) + loop personalizado depois ("veja também"). O loop personalizado remove os duplicados do herdado.
+- **Não funciona:** loop personalizado primeiro + loop herdado depois. O loop herdado ainda repete posts já exibidos, pois a exclusão não atua sobre ele.
+
+Suporte completo à exclusão em loops herdados está no roadmap (exigiria atuar em `pre_get_posts` de forma isolada, sem afetar a query principal/paginação).
+
+## Limitação conhecida: preview do editor não deduplica
+
+O preview do editor de blocos e o front-end usam pipelines de renderização diferentes:
+
+| Contexto | Renderização | Hooks do plugin atuam |
+|----------|--------------|:---------------------:|
+| Front-end | PHP (`WP_Query` + `query_loop_block_query_vars` + `render_block`) | ✅ |
+| Editor (preview) | REST API, cada bloco busca posts de forma independente | ❌ |
+
+A exclusão e o registro de IDs vivem em hooks de front-end. No editor, cada Query Loop faz sua própria chamada REST, sem o registro compartilhado por requisição que existe no front-end. Por isso o preview mostra posts duplicados mesmo com o toggle ativo. É o [comportamento documentado](https://developer.wordpress.org/reference/hooks/query_loop_block_query_vars/) do filtro `query_loop_block_query_vars` ("only influence the query that will be rendered on the front-end... the editor preview uses the REST API").
+
+**Status:** limitação aceita (validada). O front-end é a fonte da verdade; o atributo `uniqueOnPage` é salvo e persistido normalmente, sem erros no editor. Replicar a deduplicação no preview exigiria coordenar ordem e estado entre chamadas REST independentes, o que é frágil e fora do escopo.
+
 ## Hooks públicos para terceiros
 
 ### `uqle_query_loop_post__not_in`
@@ -62,12 +93,16 @@ add_filter( 'uqle_should_track_query_block', function ( bool $track, array $pars
 | Cenário | Prioridade | Notas |
 |---------|------------|-------|
 | Múltiplos loops AQL + `uniqueOnPage` | ✅ Validado | Cenário com variações AQL na mesma página |
-| AQL com `inherit: true` | ⚠️ Testar | AQL pode substituir `$wp_query`; exclusão via `query_loop_block_query_vars` pode não aplicar — candidato a v1.1 |
-| AQL com cache (`enable_caching`) | ⚠️ Testar | Transients podem servir resultados sem `post__not_in` atualizado |
-| Query Loop nativo (sem namespace) | Testar | Deve funcionar igual |
-| AQL `post__not_in` / exclude posts | Testar | Merge deve preservar ambas exclusões |
+| AQL com cache (`enable_caching`) | ✅ Validado | Sem duplicatas após purge |
+| Cache de página (full-page cache) | ✅ Validado | HTML já deduplicado é gerado no MISS e servido nos HITs; recalcula após purge |
+| AQL `post__not_in` / exclude posts | ✅ Validado | Merge preserva ambas as exclusões |
+| `perPage` / taxonomia / meta query | ✅ Validado | Exclusão respeita os filtros do loop |
+| `inherit: true` (Herdar consulta) | ⚠️ Limitação | Registra, mas não exclui no loop herdado (ver seção acima) |
+| Query Loop nativo (sem variação) | Testar | Deve funcionar igual |
 | Paginação / enhanced pagination | V2+ | Fora do MVP |
-| REST / editor preview | Conhecido | Exclusão só no front-end |
+| REST / editor preview | ✅ Limitação aceita | Exclusão só no front-end (ver seção abaixo) |
+
+> **Cache de página:** a deduplicação roda no PHP em tempo de render, então o HTML que vai para o cache já está deduplicado. Os HITs servem esse mesmo HTML; após `purge` (ou publicação de conteúdo), o próximo MISS recalcula. **Cache de fragmento / ESI** (cada loop renderizado em sub-requisição isolada) compartilharia o registry entre fragmentos e **não é suportado nem testado**.
 
 ## Diretrizes para evolução
 

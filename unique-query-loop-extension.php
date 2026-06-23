@@ -29,15 +29,15 @@ if ( is_readable( $uqle_autoloader ) ) {
 	require_once $uqle_autoloader;
 } else {
 	spl_autoload_register(
-		static function ( $class ) {
-			$prefix  = 'UniqueQueryLoopExtension\\';
+		static function ( $class_name ) {
+			$prefix   = 'UniqueQueryLoopExtension\\';
 			$base_dir = UQLE_PLUGIN_DIR . 'src/';
 
-			if ( 0 !== strpos( $class, $prefix ) ) {
+			if ( 0 !== strpos( $class_name, $prefix ) ) {
 				return;
 			}
 
-			$relative = substr( $class, strlen( $prefix ) );
+			$relative = substr( $class_name, strlen( $prefix ) );
 			$file     = $base_dir . str_replace( '\\', '/', $relative ) . '.php';
 
 			if ( is_readable( $file ) ) {

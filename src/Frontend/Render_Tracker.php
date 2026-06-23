@@ -30,9 +30,9 @@ class Render_Tracker {
 	/**
 	 * Ativa rastreamento antes da renderização de um Query Loop único.
 	 *
-	 * @param string|null      $pre_render   Conteúdo pré-renderizado ou null.
-	 * @param array            $parsed_block Bloco parseado.
-	 * @param \WP_Block|null   $parent_block Bloco pai (null no bloco raiz).
+	 * @param string|null    $pre_render   Conteúdo pré-renderizado ou null.
+	 * @param array          $parsed_block Bloco parseado.
+	 * @param \WP_Block|null $parent_block Bloco pai (null no bloco raiz).
 	 * @return string|null
 	 */
 	public static function pre_render_block( $pre_render, array $parsed_block, ?\WP_Block $parent_block ) {
@@ -64,9 +64,9 @@ class Render_Tracker {
 	/**
 	 * Desativa rastreamento após a renderização do Query Loop único.
 	 *
-	 * @param string           $block_content  HTML renderizado.
-	 * @param array            $parsed_block   Bloco parseado.
-	 * @param \WP_Block|null   $block_instance Instância do bloco.
+	 * @param string         $block_content  HTML renderizado.
+	 * @param array          $parsed_block   Bloco parseado.
+	 * @param \WP_Block|null $block_instance Instância do bloco.
 	 * @return string
 	 */
 	public static function render_block( string $block_content, array $parsed_block, ?\WP_Block $block_instance ): string {

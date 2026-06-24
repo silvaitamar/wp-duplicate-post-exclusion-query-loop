@@ -20,7 +20,7 @@ Adiciona o atributo `uniqueOnPage` e o controle **Tornar posts únicos na págin
 ### A partir do repositório
 
 ```bash
-git clone https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop.git
+git clone https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop.git
 cd silvaitamar-duplicate-post-exclusion-query-loop
 composer install --no-dev
 npm install
@@ -31,7 +31,7 @@ Copie a pasta para `wp-content/plugins/silvaitamar-duplicate-post-exclusion-quer
 
 ### A partir de uma release
 
-Baixe o ZIP em [Releases](https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/releases), extraia em `wp-content/plugins/` e ative o plugin.
+Baixe o ZIP em [Releases](https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/releases), extraia em `wp-content/plugins/` e ative o plugin.
 
 > O pacote de release já inclui `build/` compilado. Não é necessário Node.js no servidor.
 

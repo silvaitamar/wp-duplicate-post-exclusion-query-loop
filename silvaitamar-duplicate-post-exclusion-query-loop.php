@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Silvaitamar Duplicate Post Exclusion for Query Loop
- * Plugin URI:        https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop
+ * Plugin URI:        https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop
  * Description:       Prevent duplicate posts across multiple Query Loop blocks on the same page.
  * Version:           1.0.0
  * Requires at least: 6.7

@@ -119,4 +119,4 @@ add_filter( 'dpeql_should_track_query_block', function ( bool $track, array $par
 - [ ] Query Loop nativo (sem variação)
 - [ ] Outras variações `core/query`
 
-Relatos de compatibilidade podem ser abertos em [Issues](https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/issues).
+Relatos de compatibilidade podem ser abertos em [Issues](https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/issues).

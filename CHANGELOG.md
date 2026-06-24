@@ -31,5 +31,5 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 - Documentação de compatibilidade (`docs/COMPATIBILITY.md`), incluindo as limitações conhecidas — "Herdar consulta do modelo" (`inherit: true`) e preview do editor — e a validação com cache de página.
 - GitHub Actions de release e script `scripts/build-release-zip.sh`.
 
-[Unreleased]: https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/releases/tag/v1.0.0
+[Unreleased]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/releases/tag/v1.0.0

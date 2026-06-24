@@ -2,14 +2,14 @@
 /**
  * Bootstrap do plugin.
  *
- * @package UniqueQueryLoopExtension
+ * @package DuplicatePostExclusionForQueryLoop
  */
 
-namespace UniqueQueryLoopExtension;
+namespace DuplicatePostExclusionForQueryLoop;
 
-use UniqueQueryLoopExtension\Editor\Editor;
-use UniqueQueryLoopExtension\Frontend\Query_Filter;
-use UniqueQueryLoopExtension\Frontend\Render_Tracker;
+use DuplicatePostExclusionForQueryLoop\Editor\Editor;
+use DuplicatePostExclusionForQueryLoop\Frontend\Query_Filter;
+use DuplicatePostExclusionForQueryLoop\Frontend\Render_Tracker;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -24,26 +24,11 @@ final class Plugin {
 	 * @return void
 	 */
 	public static function init(): void {
-		\add_action( 'init', array( self::class, 'load_textdomain' ) );
-
 		if ( \is_admin() ) {
 			Editor::register();
 		}
 
 		Query_Filter::register();
 		Render_Tracker::register();
-	}
-
-	/**
-	 * Carrega traduções do plugin.
-	 *
-	 * @return void
-	 */
-	public static function load_textdomain(): void {
-		\load_plugin_textdomain(
-			'unique-query-loop-extension',
-			false,
-			\dirname( \plugin_basename( UQLE_PLUGIN_FILE ) ) . '/languages'
-		);
 	}
 }

@@ -4,7 +4,7 @@ Este documento descreve por que o plugin funciona com variações como [Advanced
 
 ## Princípio de design
 
-O **Unique Query Loop Extension** não substitui nem fork o bloco `core/query`. Ele:
+O **Silvaitamar Duplicate Post Exclusion for Query Loop** não substitui nem fork o bloco `core/query`. Ele:
 
 1. Adiciona um atributo ao bloco **nativo** (`uniqueOnPage`).
 2. Atua nos **hooks oficiais** do ciclo de renderização do Query Loop.
@@ -25,13 +25,13 @@ Ordem típica no front-end:
 
 ```
 pre_render_block (AQL registra filtro de query vars)
-  → pre_render_block (UQLE inicia tracking se uniqueOnPage)
+  → pre_render_block (DPEQL inicia tracking se uniqueOnPage)
     → post-template render
       → query_loop_block_query_vars (AQL: meta, tax, etc.)
-      → query_loop_block_query_vars (UQLE: post__not_in)
+      → query_loop_block_query_vars (DPEQL: post__not_in)
       → WP_Query
-      → render_block_context (UQLE registra postId)
-  → render_block (UQLE encerra tracking)
+      → render_block_context (DPEQL registra postId)
+  → render_block (DPEQL encerra tracking)
 ```
 
 ## Limitação conhecida: "Herdar consulta do modelo" (`inherit: true`)
@@ -67,23 +67,23 @@ A exclusão e o registro de IDs vivem em hooks de front-end. No editor, cada Que
 
 ## Hooks públicos para terceiros
 
-### `uqle_query_loop_post__not_in`
+### `dpeql_query_loop_post__not_in`
 
 Permite que outros plugins ajustem a lista de IDs excluídos antes da merge final.
 
 ```php
-add_filter( 'uqle_query_loop_post__not_in', function ( array $ids, array $query, WP_Block $block ) {
+add_filter( 'dpeql_query_loop_post__not_in', function ( array $ids, array $query, WP_Block $block ) {
     // Remover ou acrescentar IDs conforme necessário.
     return $ids;
 }, 10, 3 );
 ```
 
-### `uqle_should_track_query_block`
+### `dpeql_should_track_query_block`
 
 Permite opt-out ou condições extras para rastreamento (ex.: integração com page builders).
 
 ```php
-add_filter( 'uqle_should_track_query_block', function ( bool $track, array $parsed_block ) {
+add_filter( 'dpeql_should_track_query_block', function ( bool $track, array $parsed_block ) {
     return $track;
 }, 10, 2 );
 ```
@@ -119,4 +119,4 @@ add_filter( 'uqle_should_track_query_block', function ( bool $track, array $pars
 - [ ] Query Loop nativo (sem variação)
 - [ ] Outras variações `core/query`
 
-Relatos de compatibilidade podem ser abertos em [Issues](https://github.com/silvaitamar/wp-unique-query-loop-extension/issues).
+Relatos de compatibilidade podem ser abertos em [Issues](https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/issues).

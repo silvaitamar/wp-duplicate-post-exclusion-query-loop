@@ -4,7 +4,7 @@
  * Fonte ESNext compilada via `npm run build` (wp-scripts).
  * O arquivo em build/index.js é a versão de produção compatível com wp.* globals.
  *
- * @package UniqueQueryLoopExtension
+ * @package DuplicatePostExclusionForQueryLoop
  */
 
 import { addFilter } from '@wordpress/hooks';
@@ -17,7 +17,7 @@ const ATTRIBUTE_NAME = 'uniqueOnPage';
 
 addFilter(
 	'blocks.registerBlockType',
-	'unique-query-loop-extension/add-attribute',
+	'silvaitamar-duplicate-post-exclusion-query-loop/add-attribute',
 	( settings, name ) => {
 		if ( name !== 'core/query' ) {
 			return settings;
@@ -51,18 +51,18 @@ const withUniqueOnPageControl = createHigherOrderComponent( ( BlockEdit ) => {
 					<PanelBody
 						title={ __(
 							'Unique posts on page',
-							'unique-query-loop-extension'
+							'silvaitamar-duplicate-post-exclusion-query-loop'
 						) }
 						initialOpen={ false }
 					>
 						<ToggleControl
 							label={ __(
 								'Make posts unique on page',
-								'unique-query-loop-extension'
+								'silvaitamar-duplicate-post-exclusion-query-loop'
 							) }
 							help={ __(
 								'Prevents posts already shown in other Query Loops on the same page from appearing again.',
-								'unique-query-loop-extension'
+								'silvaitamar-duplicate-post-exclusion-query-loop'
 							) }
 							checked={ !! attributes[ ATTRIBUTE_NAME ] }
 							onChange={ ( value ) =>
@@ -78,6 +78,6 @@ const withUniqueOnPageControl = createHigherOrderComponent( ( BlockEdit ) => {
 
 addFilter(
 	'editor.BlockEdit',
-	'unique-query-loop-extension/with-control',
+	'silvaitamar-duplicate-post-exclusion-query-loop/with-control',
 	withUniqueOnPageControl
 );

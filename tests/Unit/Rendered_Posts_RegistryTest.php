@@ -2,17 +2,17 @@
 /**
  * Unit tests for the rendered posts registry.
  *
- * @package UniqueQueryLoopExtension
+ * @package DuplicatePostExclusionForQueryLoop
  */
 
-namespace UniqueQueryLoopExtension\Tests\Unit;
+namespace DuplicatePostExclusionForQueryLoop\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
-use UniqueQueryLoopExtension\Registry\Rendered_Posts_Registry;
+use DuplicatePostExclusionForQueryLoop\Registry\Rendered_Posts_Registry;
 
 /**
- * @covers \UniqueQueryLoopExtension\Registry\Rendered_Posts_Registry
+ * @covers \DuplicatePostExclusionForQueryLoop\Registry\Rendered_Posts_Registry
  */
 final class Rendered_Posts_RegistryTest extends TestCase {
 

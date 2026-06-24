@@ -3,7 +3,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SLUG="unique-query-loop-extension"
+SLUG="silvaitamar-duplicate-post-exclusion-query-loop"
 OUT="${ROOT}/${SLUG}.zip"
 STAGE="$(mktemp -d)"
 

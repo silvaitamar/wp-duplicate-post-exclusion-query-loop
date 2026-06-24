@@ -8,4 +8,4 @@ npm-install.log
 .phpcs.cache
 
 # Artefatos locais de release (o ZIP é gerado pelo script/CI)
-unique-query-loop-extension.zip
+silvaitamar-duplicate-post-exclusion-query-loop.zip

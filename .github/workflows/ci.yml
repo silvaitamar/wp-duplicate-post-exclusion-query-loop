@@ -27,7 +27,7 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: PHP syntax check
-        run: find unique-query-loop-extension.php src tests -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: find silvaitamar-duplicate-post-exclusion-query-loop.php src tests -name '*.php' -print0 | xargs -0 -n1 php -l
 
       - name: PHPCS
         run: composer lint

@@ -46,5 +46,5 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           files: |
-            unique-query-loop-extension.zip
+            silvaitamar-duplicate-post-exclusion-query-loop.zip
           generate_release_notes: true

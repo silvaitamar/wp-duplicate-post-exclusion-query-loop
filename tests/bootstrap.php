@@ -6,7 +6,7 @@
  * ABSPATH is defined so the plugin source files (guarded against direct
  * access) can be autoloaded.
  *
- * @package UniqueQueryLoopExtension
+ * @package DuplicatePostExclusionForQueryLoop
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

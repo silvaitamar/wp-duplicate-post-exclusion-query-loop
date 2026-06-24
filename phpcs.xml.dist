@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<ruleset name="Unique Query Loop Extension">
-	<description>Coding standards for the Unique Query Loop Extension plugin.</description>
+<ruleset name="Silvaitamar Duplicate Post Exclusion for Query Loop">
+	<description>Coding standards for the Silvaitamar Duplicate Post Exclusion for Query Loop plugin.</description>
 
-	<file>unique-query-loop-extension.php</file>
+	<file>silvaitamar-duplicate-post-exclusion-query-loop.php</file>
 	<file>src</file>
 
 	<arg name="extensions" value="php"/>
@@ -19,7 +19,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="unique-query-loop-extension"/>
+				<element value="silvaitamar-duplicate-post-exclusion-query-loop"/>
 			</property>
 		</properties>
 	</rule>

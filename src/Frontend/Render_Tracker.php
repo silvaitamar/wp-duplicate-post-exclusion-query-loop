@@ -2,12 +2,12 @@
 /**
  * Rastreia posts efetivamente renderizados por Query Loops com uniqueOnPage.
  *
- * @package UniqueQueryLoopExtension
+ * @package DuplicatePostExclusionForQueryLoop
  */
 
-namespace UniqueQueryLoopExtension\Frontend;
+namespace DuplicatePostExclusionForQueryLoop\Frontend;
 
-use UniqueQueryLoopExtension\Registry\Rendered_Posts_Registry;
+use DuplicatePostExclusionForQueryLoop\Registry\Rendered_Posts_Registry;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -52,7 +52,7 @@ class Render_Tracker {
 		 * @param bool  $track        Se o loop deve participar do registro de IDs.
 		 * @param array $parsed_block Bloco parseado do core/query.
 		 */
-		if ( ! \apply_filters( 'uqle_should_track_query_block', true, $parsed_block ) ) {
+		if ( ! \apply_filters( 'dpeql_should_track_query_block', true, $parsed_block ) ) {
 			return $pre_render;
 		}
 

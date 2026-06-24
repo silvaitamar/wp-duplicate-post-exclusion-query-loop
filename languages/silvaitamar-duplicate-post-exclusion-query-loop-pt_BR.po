@@ -1,9 +1,9 @@
-# Translation of Unique Query Loop Extension in Portuguese (Brazil)
-# This file is distributed under the same license as the Unique Query Loop Extension plugin.
+# Translation of Silvaitamar Duplicate Post Exclusion for Query Loop in Portuguese (Brazil)
+# This file is distributed under the same license as the Silvaitamar Duplicate Post Exclusion for Query Loop plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unique Query Loop Extension 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/silvaitamar/wp-unique-query-loop-extension/issues\n"
+"Project-Id-Version: Silvaitamar Duplicate Post Exclusion for Query Loop 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/silvaitamar/wp-silvaitamar-duplicate-post-exclusion-query-loop/issues\n"
 "Last-Translator: Itamar Silva\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -14,7 +14,7 @@ msgstr ""
 "POT-Creation-Date: 2026-06-21T23:10:00+00:00\n"
 "PO-Revision-Date: 2026-06-21T23:10:00+00:00\n"
 "X-Generator: manual\n"
-"X-Domain: unique-query-loop-extension\n"
+"X-Domain: silvaitamar-duplicate-post-exclusion-query-loop\n"
 
 #. Panel title in the block editor sidebar.
 #: src/index.js:53

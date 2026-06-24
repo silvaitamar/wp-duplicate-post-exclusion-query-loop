@@ -2,10 +2,10 @@
 /**
  * Assets do editor de blocos.
  *
- * @package UniqueQueryLoopExtension
+ * @package DuplicatePostExclusionForQueryLoop
  */
 
-namespace UniqueQueryLoopExtension\Editor;
+namespace DuplicatePostExclusionForQueryLoop\Editor;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -29,26 +29,26 @@ class Editor {
 	 * @return void
 	 */
 	public static function enqueue_assets(): void {
-		$asset_file = UQLE_PLUGIN_DIR . 'build/index.asset.php';
+		$asset_file = DPEQL_PLUGIN_DIR . 'build/index.asset.php';
 		$asset      = is_readable( $asset_file )
 			? require $asset_file
 			: array(
 				'dependencies' => array(),
-				'version'      => UQLE_VERSION,
+				'version'      => DPEQL_VERSION,
 			);
 
 		\wp_enqueue_script(
-			'unique-query-loop-extension-editor',
-			UQLE_PLUGIN_URL . 'build/index.js',
+			'silvaitamar-duplicate-post-exclusion-query-loop-editor',
+			DPEQL_PLUGIN_URL . 'build/index.js',
 			$asset['dependencies'],
 			$asset['version'],
 			true
 		);
 
 		\wp_set_script_translations(
-			'unique-query-loop-extension-editor',
-			'unique-query-loop-extension',
-			UQLE_PLUGIN_DIR . 'languages'
+			'silvaitamar-duplicate-post-exclusion-query-loop-editor',
+			'silvaitamar-duplicate-post-exclusion-query-loop',
+			DPEQL_PLUGIN_DIR . 'languages'
 		);
 	}
 }

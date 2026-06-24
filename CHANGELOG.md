@@ -6,6 +6,14 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 
 ## [Unreleased]
 
+### Changed
+
+- Renomeado para **Silvaitamar Duplicate Post Exclusion for Query Loop** (slug, text domain e pasta `silvaitamar-duplicate-post-exclusion-query-loop`), seguindo a orientação da revisão do WordPress.org sobre nomes distintivos. Renomeação completa, incluindo o interno (sem a marca pessoal): namespace `UniqueQueryLoopExtension` → `DuplicatePostExclusionForQueryLoop`, constantes `UQLE_` → `DPEQL_` e hooks públicos `uqle_*` → `dpeql_*`.
+
+### Removed
+
+- Removida a chamada `load_plugin_textdomain()`: desnecessária para plugins hospedados no WordPress.org desde o WP 4.6, e o plugin não tem strings PHP traduzíveis (as do editor carregam via `wp_set_script_translations`).
+
 ### Added
 
 - Tradução para Espanhol (es_ES) empacotada em `languages/` (`es_ES.po`/`.mo` e o `.json` de tradução do script do editor), tornando o plugin trilíngue (en, pt_BR, es_ES).
@@ -23,5 +31,5 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 - Documentação de compatibilidade (`docs/COMPATIBILITY.md`), incluindo as limitações conhecidas — "Herdar consulta do modelo" (`inherit: true`) e preview do editor — e a validação com cache de página.
 - GitHub Actions de release e script `scripts/build-release-zip.sh`.
 
-[Unreleased]: https://github.com/silvaitamar/wp-unique-query-loop-extension/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/silvaitamar/wp-unique-query-loop-extension/releases/tag/v1.0.0
+[Unreleased]: https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/releases/tag/v1.0.0

@@ -1,4 +1,4 @@
-# Unique Query Loop Extension
+# Silvaitamar Duplicate Post Exclusion for Query Loop
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -20,18 +20,18 @@ Adiciona o atributo `uniqueOnPage` e o controle **Tornar posts únicos na págin
 ### A partir do repositório
 
 ```bash
-git clone https://github.com/silvaitamar/wp-unique-query-loop-extension.git
-cd wp-unique-query-loop-extension
+git clone https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop.git
+cd silvaitamar-duplicate-post-exclusion-query-loop
 composer install --no-dev
 npm install
 npm run build
 ```
 
-Copie a pasta para `wp-content/plugins/unique-query-loop-extension/` (ou use o clone diretamente nesse caminho) e ative em **Plugins**.
+Copie a pasta para `wp-content/plugins/silvaitamar-duplicate-post-exclusion-query-loop/` (ou use o clone diretamente nesse caminho) e ative em **Plugins**.
 
 ### A partir de uma release
 
-Baixe o ZIP em [Releases](https://github.com/silvaitamar/wp-unique-query-loop-extension/releases), extraia em `wp-content/plugins/` e ative o plugin.
+Baixe o ZIP em [Releases](https://github.com/silvaitamar/silvaitamar-duplicate-post-exclusion-query-loop/releases), extraia em `wp-content/plugins/` e ative o plugin.
 
 > O pacote de release já inclui `build/` compilado. Não é necessário Node.js no servidor.
 
@@ -50,7 +50,7 @@ Estrutura principal:
 ```text
 src/           Código PHP (PSR-4) e JavaScript do editor
 build/         Assets compilados enfileirados no admin
-unique-query-loop-extension.php   Bootstrap
+silvaitamar-duplicate-post-exclusion-query-loop.php   Bootstrap
 readme.txt     Metadados para o WordPress.org (inglês)
 ```
 

@@ -1,4 +1,4 @@
-=== Unique Query Loop Extension ===
+=== Silvaitamar Duplicate Post Exclusion for Query Loop ===
 Contributors: itamarsilvacc
 Tags: query loop, gutenberg, block editor, posts, duplicate
 Requires at least: 6.7
@@ -12,7 +12,7 @@ Prevent duplicate posts across multiple Query Loop blocks on the same page.
 
 == Description ==
 
-**Unique Query Loop Extension** adds a toggle to the native `core/query` (Query Loop) block so posts already shown by another Query Loop on the same page are not displayed again.
+**Silvaitamar Duplicate Post Exclusion for Query Loop** adds a toggle to the native `core/query` (Query Loop) block so posts already shown by another Query Loop on the same page are not displayed again.
 
 = How it works =
 
@@ -36,7 +36,7 @@ Prevent duplicate posts across multiple Query Loop blocks on the same page.
 
 == Installation ==
 
-1. Upload the `unique-query-loop-extension` folder to `/wp-content/plugins/`.
+1. Upload the `silvaitamar-duplicate-post-exclusion-query-loop` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the **Plugins** screen in WordPress.
 3. Edit a Query Loop block and enable **Make posts unique on page** in the block sidebar.
 

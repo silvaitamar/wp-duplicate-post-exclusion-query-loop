@@ -3,6 +3,7 @@
 # pois o runtime usa o bundle compilado em build/.
 .github/
 .git/
+.wordpress-org/
 .gitignore
 .gitattributes
 .distignore

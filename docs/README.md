@@ -1,6 +1,6 @@
 # Documentação
 
-Documentação técnica do **Unique Query Loop Extension** incluída no repositório.
+Documentação técnica do **Silvaitamar Duplicate Post Exclusion for Query Loop** incluída no repositório.
 
 | Documento | Conteúdo |
 |-----------|----------|

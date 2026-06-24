@@ -2,10 +2,10 @@
 /**
  * Registro em memória dos IDs de posts já exibidos na requisição atual.
  *
- * @package UniqueQueryLoopExtension
+ * @package DuplicatePostExclusionForQueryLoop
  */
 
-namespace UniqueQueryLoopExtension\Registry;
+namespace DuplicatePostExclusionForQueryLoop\Registry;
 
 defined( 'ABSPATH' ) || exit;
 

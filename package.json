@@ -1,7 +1,7 @@
 {
-	"name": "wp-unique-query-loop-extension",
+	"name": "silvaitamar-duplicate-post-exclusion-query-loop",
 	"version": "1.0.0",
-	"description": "Estende o bloco Query Loop com exclusão de posts duplicados na mesma página.",
+	"description": "Prevent duplicate posts across multiple Query Loop blocks on the same page.",
 	"private": true,
 	"scripts": {
 		"build": "wp-scripts build",

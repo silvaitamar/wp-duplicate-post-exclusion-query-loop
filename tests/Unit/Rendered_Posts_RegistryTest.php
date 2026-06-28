@@ -2,17 +2,17 @@
 /**
  * Unit tests for the rendered posts registry.
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
-namespace DuplicatePostExclusionForQueryLoop\Tests\Unit;
+namespace Sidpeql\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
-use DuplicatePostExclusionForQueryLoop\Registry\Rendered_Posts_Registry;
+use Sidpeql\Registry\Rendered_Posts_Registry;
 
 /**
- * @covers \DuplicatePostExclusionForQueryLoop\Registry\Rendered_Posts_Registry
+ * @covers \Sidpeql\Registry\Rendered_Posts_Registry
  */
 final class Rendered_Posts_RegistryTest extends TestCase {
 

@@ -6,7 +6,7 @@
  * ABSPATH is defined so the plugin source files (guarded against direct
  * access) can be autoloaded.
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -8,7 +8,9 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 
 ### Changed
 
-- Renomeado para **Silvaitamar Duplicate Post Exclusion for Query Loop** (slug, text domain e pasta `silvaitamar-duplicate-post-exclusion-query-loop`), seguindo a orientação da revisão do WordPress.org sobre nomes distintivos. Renomeação completa, incluindo o interno (sem a marca pessoal): namespace `UniqueQueryLoopExtension` → `DuplicatePostExclusionForQueryLoop`, constantes `UQLE_` → `DPEQL_` e hooks públicos `uqle_*` → `dpeql_*`.
+- Renomeado para **Silvaitamar Duplicate Post Exclusion for Query Loop** (slug, text domain e pasta `silvaitamar-duplicate-post-exclusion-query-loop`), seguindo a orientação da revisão do WordPress.org sobre nomes distintivos.
+- Unificados todos os identificadores internos sob o prefixo distintivo único **`sidpeql`** (atendendo à exigência de unicidade da revisão do WordPress.org, que apontou a palavra comum "duplicate" no namespace): namespace `Sidpeql\`, constantes `SIDPEQL_*` e hooks públicos `sidpeql_*`.
+- Adicionada checagem `WordPress.NamingConventions.PrefixAllGlobals` ao `phpcs.xml.dist` para validar automaticamente o prefixo e evitar regressões.
 
 ### Removed
 

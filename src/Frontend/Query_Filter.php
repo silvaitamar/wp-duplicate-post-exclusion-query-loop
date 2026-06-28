@@ -2,12 +2,12 @@
 /**
  * Filtra argumentos da WP_Query do Query Loop no front-end.
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
-namespace DuplicatePostExclusionForQueryLoop\Frontend;
+namespace Sidpeql\Frontend;
 
-use DuplicatePostExclusionForQueryLoop\Registry\Rendered_Posts_Registry;
+use Sidpeql\Registry\Rendered_Posts_Registry;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -53,7 +53,7 @@ class Query_Filter {
 		 * @param array<string,mixed> $query        Argumentos atuais da WP_Query.
 		 * @param \WP_Block           $block        Instância do bloco post-template.
 		 */
-		$rendered_ids = \apply_filters( 'dpeql_query_loop_post__not_in', $rendered_ids, $query, $block );
+		$rendered_ids = \apply_filters( 'sidpeql_query_loop_post__not_in', $rendered_ids, $query, $block );
 
 		if ( empty( $rendered_ids ) ) {
 			return $query;

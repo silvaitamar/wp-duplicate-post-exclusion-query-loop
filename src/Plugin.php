@@ -2,14 +2,14 @@
 /**
  * Bootstrap do plugin.
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
-namespace DuplicatePostExclusionForQueryLoop;
+namespace Sidpeql;
 
-use DuplicatePostExclusionForQueryLoop\Editor\Editor;
-use DuplicatePostExclusionForQueryLoop\Frontend\Query_Filter;
-use DuplicatePostExclusionForQueryLoop\Frontend\Render_Tracker;
+use Sidpeql\Editor\Editor;
+use Sidpeql\Frontend\Query_Filter;
+use Sidpeql\Frontend\Render_Tracker;
 
 defined( 'ABSPATH' ) || exit;
 

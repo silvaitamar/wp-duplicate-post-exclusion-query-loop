@@ -25,13 +25,13 @@ Ordem típica no front-end:
 
 ```
 pre_render_block (AQL registra filtro de query vars)
-  → pre_render_block (DPEQL inicia tracking se uniqueOnPage)
+  → pre_render_block (SIDPEQL inicia tracking se uniqueOnPage)
     → post-template render
       → query_loop_block_query_vars (AQL: meta, tax, etc.)
-      → query_loop_block_query_vars (DPEQL: post__not_in)
+      → query_loop_block_query_vars (SIDPEQL: post__not_in)
       → WP_Query
-      → render_block_context (DPEQL registra postId)
-  → render_block (DPEQL encerra tracking)
+      → render_block_context (SIDPEQL registra postId)
+  → render_block (SIDPEQL encerra tracking)
 ```
 
 ## Limitação conhecida: "Herdar consulta do modelo" (`inherit: true`)
@@ -67,23 +67,23 @@ A exclusão e o registro de IDs vivem em hooks de front-end. No editor, cada Que
 
 ## Hooks públicos para terceiros
 
-### `dpeql_query_loop_post__not_in`
+### `sidpeql_query_loop_post__not_in`
 
 Permite que outros plugins ajustem a lista de IDs excluídos antes da merge final.
 
 ```php
-add_filter( 'dpeql_query_loop_post__not_in', function ( array $ids, array $query, WP_Block $block ) {
+add_filter( 'sidpeql_query_loop_post__not_in', function ( array $ids, array $query, WP_Block $block ) {
     // Remover ou acrescentar IDs conforme necessário.
     return $ids;
 }, 10, 3 );
 ```
 
-### `dpeql_should_track_query_block`
+### `sidpeql_should_track_query_block`
 
 Permite opt-out ou condições extras para rastreamento (ex.: integração com page builders).
 
 ```php
-add_filter( 'dpeql_should_track_query_block', function ( bool $track, array $parsed_block ) {
+add_filter( 'sidpeql_should_track_query_block', function ( bool $track, array $parsed_block ) {
     return $track;
 }, 10, 2 );
 ```

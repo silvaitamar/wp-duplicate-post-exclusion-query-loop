@@ -2,10 +2,10 @@
 /**
  * Assets do editor de blocos.
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
-namespace DuplicatePostExclusionForQueryLoop\Editor;
+namespace Sidpeql\Editor;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -29,17 +29,17 @@ class Editor {
 	 * @return void
 	 */
 	public static function enqueue_assets(): void {
-		$asset_file = DPEQL_PLUGIN_DIR . 'build/index.asset.php';
+		$asset_file = SIDPEQL_PLUGIN_DIR . 'build/index.asset.php';
 		$asset      = is_readable( $asset_file )
 			? require $asset_file
 			: array(
 				'dependencies' => array(),
-				'version'      => DPEQL_VERSION,
+				'version'      => SIDPEQL_VERSION,
 			);
 
 		\wp_enqueue_script(
 			'silvaitamar-duplicate-post-exclusion-query-loop-editor',
-			DPEQL_PLUGIN_URL . 'build/index.js',
+			SIDPEQL_PLUGIN_URL . 'build/index.js',
 			$asset['dependencies'],
 			$asset['version'],
 			true
@@ -48,7 +48,7 @@ class Editor {
 		\wp_set_script_translations(
 			'silvaitamar-duplicate-post-exclusion-query-loop-editor',
 			'silvaitamar-duplicate-post-exclusion-query-loop',
-			DPEQL_PLUGIN_DIR . 'languages'
+			SIDPEQL_PLUGIN_DIR . 'languages'
 		);
 	}
 }

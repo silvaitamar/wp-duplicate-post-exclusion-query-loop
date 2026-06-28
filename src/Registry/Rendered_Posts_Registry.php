@@ -2,10 +2,10 @@
 /**
  * Registro em memória dos IDs de posts já exibidos na requisição atual.
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
-namespace DuplicatePostExclusionForQueryLoop\Registry;
+namespace Sidpeql\Registry;
 
 defined( 'ABSPATH' ) || exit;
 

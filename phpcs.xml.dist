@@ -23,4 +23,14 @@
 			</property>
 		</properties>
 	</rule>
+
+	<!-- Enforce a single, distinctive prefix on all global symbols, hooks and the namespace. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="sidpeql"/>
+				<element value="Sidpeql"/>
+			</property>
+		</properties>
+	</rule>
 </ruleset>

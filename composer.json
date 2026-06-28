@@ -14,12 +14,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"DuplicatePostExclusionForQueryLoop\\": "src/"
+			"Sidpeql\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"DuplicatePostExclusionForQueryLoop\\Tests\\": "tests/"
+			"Sidpeql\\Tests\\": "tests/"
 		}
 	},
 	"config": {

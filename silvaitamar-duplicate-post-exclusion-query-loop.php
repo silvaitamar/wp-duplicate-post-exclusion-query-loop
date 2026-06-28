@@ -13,25 +13,25 @@
  * Text Domain:       silvaitamar-duplicate-post-exclusion-query-loop
  * Domain Path:       /languages
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'DPEQL_VERSION', '1.0.0' );
-define( 'DPEQL_PLUGIN_FILE', __FILE__ );
-define( 'DPEQL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'DPEQL_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'SIDPEQL_VERSION', '1.0.0' );
+define( 'SIDPEQL_PLUGIN_FILE', __FILE__ );
+define( 'SIDPEQL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'SIDPEQL_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
-$dpeql_autoloader = DPEQL_PLUGIN_DIR . 'vendor/autoload.php';
+$sidpeql_autoloader = SIDPEQL_PLUGIN_DIR . 'vendor/autoload.php';
 
-if ( is_readable( $dpeql_autoloader ) ) {
-	require_once $dpeql_autoloader;
+if ( is_readable( $sidpeql_autoloader ) ) {
+	require_once $sidpeql_autoloader;
 } else {
 	spl_autoload_register(
 		static function ( $class_name ) {
-			$prefix   = 'DuplicatePostExclusionForQueryLoop\\';
-			$base_dir = DPEQL_PLUGIN_DIR . 'src/';
+			$prefix   = 'Sidpeql\\';
+			$base_dir = SIDPEQL_PLUGIN_DIR . 'src/';
 
 			if ( 0 !== strpos( $class_name, $prefix ) ) {
 				return;
@@ -47,4 +47,4 @@ if ( is_readable( $dpeql_autoloader ) ) {
 	);
 }
 
-\DuplicatePostExclusionForQueryLoop\Plugin::init();
+\Sidpeql\Plugin::init();

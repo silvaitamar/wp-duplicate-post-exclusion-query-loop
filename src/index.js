@@ -4,7 +4,7 @@
  * Fonte ESNext compilada via `npm run build` (wp-scripts).
  * O arquivo em build/index.js é a versão de produção compatível com wp.* globals.
  *
- * @package DuplicatePostExclusionForQueryLoop
+ * @package Sidpeql
  */
 
 import { addFilter } from '@wordpress/hooks';

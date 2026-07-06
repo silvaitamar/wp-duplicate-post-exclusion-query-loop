@@ -74,4 +74,4 @@ Partially. A Query Loop set to inherit the template query renders from the globa
 == Upgrade Notice ==
 
 = 1.0.0 =
-Initial release.
+Initial public release.

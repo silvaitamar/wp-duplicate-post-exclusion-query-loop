@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "POT-Creation-Date: 2026-06-21T23:10:00+00:00\n"
-"PO-Revision-Date: 2026-06-21T23:10:00+00:00\n"
+"PO-Revision-Date: 2026-07-07T18:50:00+00:00\n"
 "X-Generator: manual\n"
 "X-Domain: silvaitamar-duplicate-post-exclusion-query-loop\n"
 
@@ -29,4 +29,4 @@ msgstr "Tornar posts únicos na página"
 #. Toggle control help text in the block editor sidebar.
 #: src/index.js:64
 msgid "Prevents posts already shown in other Query Loops on the same page from appearing again."
-msgstr "Evita que posts já exibidos em outros Query Loops da mesma página apareçam novamente."
+msgstr "Evita que posts já exibidos em outros loops de consulta da mesma página apareçam novamente."

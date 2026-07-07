@@ -1,5 +1,5 @@
 {
-	"translation-revision-date": "2026-06-21 23:10:00+0000",
+	"translation-revision-date": "2026-07-07 18:50:00+0000",
 	"generator": "manual",
 	"domain": "messages",
 	"locale_data": {
@@ -16,7 +16,7 @@
 				"Tornar posts únicos na página"
 			],
 			"Prevents posts already shown in other Query Loops on the same page from appearing again.": [
-				"Evita que posts já exibidos em outros Query Loops da mesma página apareçam novamente."
+				"Evita que posts já exibidos em outros loops de consulta da mesma página apareçam novamente."
 			]
 		}
 	}

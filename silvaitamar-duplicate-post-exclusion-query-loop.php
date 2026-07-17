@@ -3,7 +3,7 @@
  * Plugin Name:       Duplicate Post Exclusion for Query Loop Block
  * Plugin URI:        https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop
  * Description:       Prevent duplicate posts across multiple Query Loop blocks on the same page.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Itamar Silva
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SIDPEQL_VERSION', '1.0.1' );
+define( 'SIDPEQL_VERSION', '1.0.2' );
 define( 'SIDPEQL_PLUGIN_FILE', __FILE__ );
 define( 'SIDPEQL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SIDPEQL_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

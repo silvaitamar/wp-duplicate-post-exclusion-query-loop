@@ -1,18 +1,20 @@
 === Duplicate Post Exclusion for Query Loop Block ===
 Contributors: itamarsilvacc
-Tags: query loop, gutenberg, block editor, posts, duplicate
+Tags: query loop, duplicate posts, deduplication, unique posts, block editor
 Requires at least: 6.7
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Prevent duplicate posts across multiple Query Loop blocks on the same page.
+Prevent duplicate posts across multiple Query Loop blocks on the same page — automatic deduplication, no extra queries.
 
 == Description ==
 
 **Duplicate Post Exclusion for Query Loop Block** adds a toggle to the native `core/query` (Query Loop) block so posts already shown by another Query Loop on the same page are not displayed again.
+
+This is automatic deduplication for the block editor: when you place several Query Loops on one page (for example a featured list above a recent-posts list), each enabled loop skips the posts already rendered above it, keeping every post unique on the page.
 
 = How it works =
 
@@ -42,9 +44,17 @@ Prevent duplicate posts across multiple Query Loop blocks on the same page.
 
 == Frequently Asked Questions ==
 
+= How do I prevent duplicate posts in Query Loop blocks? =
+
+Edit each Query Loop block and enable **Make posts unique on page** in the block sidebar. On the front end, every enabled loop excludes the posts already shown by the loops above it, so each post appears only once on the page.
+
 = Do I need a separate block? =
 
 No. The plugin extends the native `core/query` block only.
+
+= Will it slow down my site? =
+
+No. The plugin adds no extra database queries. It only adjusts the `post__not_in` argument of the queries your Query Loops already run, using a per-request in-memory registry.
 
 = Does this affect the editor preview? =
 
@@ -68,6 +78,9 @@ Partially. A Query Loop set to inherit the template query renders from the globa
 
 == Changelog ==
 
+= 1.0.2 =
+* Documentation only: improved the readme for search discoverability (refined tags, short description, and description) and added two FAQ entries. No functional changes.
+
 = 1.0.1 =
 * Renamed the plugin display name to "Duplicate Post Exclusion for Query Loop Block". The plugin slug, text domain, and functionality are unchanged.
 * Bundled the Spanish (Spain) translation.
@@ -76,6 +89,9 @@ Partially. A Query Loop set to inherit the template query renders from the globa
 * Initial release: `uniqueOnPage` attribute, front-end exclusion, and rendered post registry.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Documentation and search metadata only. No functional changes.
 
 = 1.0.1 =
 Display name updated to "Duplicate Post Exclusion for Query Loop Block". No action needed; the slug and functionality stay the same.

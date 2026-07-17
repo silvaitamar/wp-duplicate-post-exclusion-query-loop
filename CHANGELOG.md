@@ -6,6 +6,16 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-07-17
+
+### Changed
+
+- Melhorado o `readme.txt` para descoberta orgânica (busca interna do WordPress.org e SEO): refinadas as tags, a descrição curta e a descrição, com sinônimos reais (deduplication, unique posts). Sem mudanças funcionais.
+
+### Added
+
+- Duas entradas de FAQ no `readme.txt`: como evitar posts duplicados em blocos Query Loop e uma nota de performance.
+
 ## [1.0.1] - 2026-07-16
 
 ### Changed
@@ -36,6 +46,7 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 - Documentação de compatibilidade (`docs/COMPATIBILITY.md`), incluindo as limitações conhecidas — "Herdar consulta do modelo" (`inherit: true`) e preview do editor — e a validação com cache de página.
 - GitHub Actions de release e script `scripts/build-release-zip.sh`.
 
-[Unreleased]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/releases/tag/v1.0.0

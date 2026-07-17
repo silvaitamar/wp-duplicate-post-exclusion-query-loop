@@ -1,6 +1,7 @@
 # Duplicate Post Exclusion for Query Loop Block
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![Live Preview](https://img.shields.io/badge/Live%20Preview-WordPress%20Playground-0073aa.svg)](https://wordpress.org/plugins/silvaitamar-duplicate-post-exclusion-query-loop/?preview=1)
 
 Estende o bloco nativo **Query Loop** (`core/query`) para evitar posts duplicados entre múltiplos loops na mesma página.
 
@@ -9,6 +10,16 @@ Estende o bloco nativo **Query Loop** (`core/query`) para evitar posts duplicado
 ## O que faz
 
 Adiciona o atributo `uniqueOnPage` e o controle **Tornar posts únicos na página** no editor de blocos. No front-end, cada Query Loop com a opção ativa exclui posts já exibidos por loops anteriores (via `post__not_in`).
+
+## Demonstração ao vivo (Live Preview)
+
+A deduplicação acontece **no front-end**, não no editor — então a melhor forma de vê-la em ação é o **Live Preview** no WordPress Playground, sem instalar nada:
+
+- Botão **Live Preview** na [página do plugin no WordPress.org](https://wordpress.org/plugins/silvaitamar-duplicate-post-exclusion-query-loop/) ou [abra direto no Playground](https://wordpress.org/plugins/silvaitamar-duplicate-post-exclusion-query-loop/?preview=1).
+- O demo mostra uma home com um loop **Latest** seguido de loops por categoria; com a opção ativa, os posts do Latest não se repetem nas seções abaixo.
+- O ambiente do preview é definido por [`.wordpress-org/blueprints/blueprint.json`](.wordpress-org/blueprints/blueprint.json).
+
+> Abra em um navegador completo (Safari, Chrome, Firefox) — o Playground não roda em navegadores embutidos de apps.
 
 ## Requisitos
 

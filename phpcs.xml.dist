@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="Silvaitamar Duplicate Post Exclusion for Query Loop">
-	<description>Coding standards for the Silvaitamar Duplicate Post Exclusion for Query Loop plugin.</description>
+<ruleset name="Duplicate Post Exclusion for Query Loop Block">
+	<description>Coding standards for the Duplicate Post Exclusion for Query Loop Block plugin.</description>
 
 	<file>silvaitamar-duplicate-post-exclusion-query-loop.php</file>
 	<file>src</file>

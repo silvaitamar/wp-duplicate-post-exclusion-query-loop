@@ -1,8 +1,8 @@
-# Translation of Silvaitamar Duplicate Post Exclusion for Query Loop in Portuguese (Brazil)
-# This file is distributed under the same license as the Silvaitamar Duplicate Post Exclusion for Query Loop plugin.
+# Translation of Duplicate Post Exclusion for Query Loop Block in Portuguese (Brazil)
+# This file is distributed under the same license as the Duplicate Post Exclusion for Query Loop Block plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Silvaitamar Duplicate Post Exclusion for Query Loop 1.0.0\n"
+"Project-Id-Version: Duplicate Post Exclusion for Query Loop Block 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/issues\n"
 "Last-Translator: Itamar Silva\n"
 "Language-Team: Portuguese (Brazil)\n"

@@ -4,7 +4,7 @@ Este documento descreve por que o plugin funciona com variações como [Advanced
 
 ## Princípio de design
 
-O **Silvaitamar Duplicate Post Exclusion for Query Loop** não substitui nem fork o bloco `core/query`. Ele:
+O **Duplicate Post Exclusion for Query Loop Block** não substitui nem fork o bloco `core/query`. Ele:
 
 1. Adiciona um atributo ao bloco **nativo** (`uniqueOnPage`).
 2. Atua nos **hooks oficiais** do ciclo de renderização do Query Loop.

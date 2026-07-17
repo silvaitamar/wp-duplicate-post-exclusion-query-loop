@@ -1,10 +1,10 @@
-=== Silvaitamar Duplicate Post Exclusion for Query Loop ===
+=== Duplicate Post Exclusion for Query Loop Block ===
 Contributors: itamarsilvacc
 Tags: query loop, gutenberg, block editor, posts, duplicate
 Requires at least: 6.7
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Prevent duplicate posts across multiple Query Loop blocks on the same page.
 
 == Description ==
 
-**Silvaitamar Duplicate Post Exclusion for Query Loop** adds a toggle to the native `core/query` (Query Loop) block so posts already shown by another Query Loop on the same page are not displayed again.
+**Duplicate Post Exclusion for Query Loop Block** adds a toggle to the native `core/query` (Query Loop) block so posts already shown by another Query Loop on the same page are not displayed again.
 
 = How it works =
 
@@ -68,10 +68,17 @@ Partially. A Query Loop set to inherit the template query renders from the globa
 
 == Changelog ==
 
+= 1.0.1 =
+* Renamed the plugin display name to "Duplicate Post Exclusion for Query Loop Block". The plugin slug, text domain, and functionality are unchanged.
+* Bundled the Spanish (Spain) translation.
+
 = 1.0.0 =
 * Initial release: `uniqueOnPage` attribute, front-end exclusion, and rendered post registry.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Display name updated to "Duplicate Post Exclusion for Query Loop Block". No action needed; the slug and functionality stay the same.
 
 = 1.0.0 =
 Initial public release.

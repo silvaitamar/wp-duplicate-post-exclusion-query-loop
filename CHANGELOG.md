@@ -6,8 +6,11 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-07-16
+
 ### Changed
 
+- Nome de exibição alterado para **Duplicate Post Exclusion for Query Loop Block** (apenas o *display name*; o slug, o text domain `silvaitamar-duplicate-post-exclusion-query-loop`, o namespace `Sidpeql\` e as constantes `SIDPEQL_*` permanecem inalterados).
 - Renomeado para **Silvaitamar Duplicate Post Exclusion for Query Loop** (slug, text domain e pasta `silvaitamar-duplicate-post-exclusion-query-loop`), seguindo a orientação da revisão do WordPress.org sobre nomes distintivos.
 - Unificados todos os identificadores internos sob o prefixo distintivo único **`sidpeql`** (atendendo à exigência de unicidade da revisão do WordPress.org, que apontou a palavra comum "duplicate" no namespace): namespace `Sidpeql\`, constantes `SIDPEQL_*` e hooks públicos `sidpeql_*`.
 - Adicionada checagem `WordPress.NamingConventions.PrefixAllGlobals` ao `phpcs.xml.dist` para validar automaticamente o prefixo e evitar regressões.
@@ -33,5 +36,6 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 - Documentação de compatibilidade (`docs/COMPATIBILITY.md`), incluindo as limitações conhecidas — "Herdar consulta do modelo" (`inherit: true`) e preview do editor — e a validação com cache de página.
 - GitHub Actions de release e script `scripts/build-release-zip.sh`.
 
-[Unreleased]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/silvaitamar/wp-duplicate-post-exclusion-query-loop/releases/tag/v1.0.0

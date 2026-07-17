@@ -1,6 +1,6 @@
 # Documentação
 
-Documentação técnica do **Silvaitamar Duplicate Post Exclusion for Query Loop** incluída no repositório.
+Documentação técnica do **Duplicate Post Exclusion for Query Loop Block** incluída no repositório.
 
 | Documento | Conteúdo |
 |-----------|----------|
